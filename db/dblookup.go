@@ -21,7 +21,6 @@ func Lookup(username string) ([]UserMapping){
   db, err := sql.Open("libsql", url)
   if err != nil {
     fmt.Fprintf(os.Stderr, "failed to open db %s: %s", url, err)
-    os.Exit(1)
   }
   
   userMappings,err:=FindService(db, username)
