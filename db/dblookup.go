@@ -10,7 +10,7 @@ import (
 )
 
 func Lookup(username string) ([]UserMapping){
-  value, err := goenv.GetEnv("YOUR_ENV_VARIABLE")
+  value, err := goenv.GetEnv("TORSO_STRING")
   
   if err != nil {
       fmt.Println(err)
