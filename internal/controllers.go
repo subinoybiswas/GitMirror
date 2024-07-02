@@ -12,7 +12,7 @@ func ServiceHandler(w http.ResponseWriter, r *http.Request) {
 
 	for _, service := range services {
 		serviceURL := "https://" + service + path
-		log.Println("Checking", serviceURL)
+		log.Println("Checking", serviceURL,path)
 		if CheckService(serviceURL) {
 			log.Println("Redirecting to", serviceURL)
 			http.Redirect(w, r, serviceURL, http.StatusFound)
